@@ -7,10 +7,10 @@ qr = qrcode.QRCode(
     border = 4
 )
 
-data = input("Enter the data to be encoded (eg. URL, texts etc) \n : ")
+def encode(data):
+    qr.add_data(data)
+    qr.make(fit=True)
 
-qr.add_data(data)
-qr.make(fit=True)
+    return qr.make_image(fill_color = "black", back_color="white")
 
-img = qr.make_image(fill_color = "black", back_color="white")
-img.save("qrcode_documentation.png")
+encode("Hello").save("qrcode.png")
