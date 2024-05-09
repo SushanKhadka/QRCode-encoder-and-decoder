@@ -13,4 +13,3 @@ def encode(data):
 
     return qr.make_image(fill_color = "black", back_color="white")
 
-encode("Hello").save("qrcode.png")
