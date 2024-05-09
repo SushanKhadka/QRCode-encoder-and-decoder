@@ -9,8 +9,6 @@ def generateQrCode():
     file = filedialog.asksaveasfile(defaultextension=".png",
                                 filetypes=(("PNG file", ".png"), ("JPEG file", ".jpg")))
     
-    if file is None:
-        return
     
     qrcodeImage.save(file)
 
