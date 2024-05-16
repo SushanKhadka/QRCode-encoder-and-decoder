@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import filedialog
 from encode import encode
-from decode import decode_qrcode
+from decode import decodeQRCode
 
 
 message = ""
@@ -11,12 +11,11 @@ def decodeQRCode():
                                           filetypes=[("PNG file", ".png"), ("JPEG file", ".jpg")])
     
 
-    decodedMessage = decode_qrcode(filePath)
+    decodedMessage = decodeQRCode(filePath)
     
-
     message = Label(window,
                     font=("Arial", 12, "italic"),
-                    text=decodedMessage)
+                    text=decodedMessage,)
     message.pack()
 
 # This code generates a GUI for the QR Code encoder once "Encode a QR Code" is pressed
